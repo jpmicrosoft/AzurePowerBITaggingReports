@@ -7,7 +7,8 @@ This solution extracts tagging from all of the subscriptions of which the user w
 
 ## Prerequisites 
 Please ensure that you have PowerShell 5.1 and the modules listed below installed.
- 
+
+*Please ensure that you change the environment variable in the script if you are not using Azure Commercial. 
 ### PowerShell
 
 ###### PowerShell version 5.1
