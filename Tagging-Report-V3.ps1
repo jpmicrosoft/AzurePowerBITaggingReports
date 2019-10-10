@@ -1,5 +1,11 @@
-# Requires –Modules Az
-# Requires -Modules Export-Excel
+# Requires Az Module https://aka.ms/az270
+# Install-Module -Name Az
+
+
+# Requires ImportExcel Module https://aka.ms/importexcel542
+# Install-Module -Name ImportExcel -RequiredVersion 5.4.2 
+
+Import-Module ImportExcel
 
 function Set-AzureLogin {
     
@@ -21,17 +27,15 @@ function Set-AzureLogin {
     }
 
     if ($needLogin) {        
-        #make sure to use -Environment      
-        Connect-AzAccount -Environment AzureUSGovernment
+# Ensure to set the -Environment AzureCloud for commercial or AzureUSGovernment, etc. https://aka.ms/azenv       
+        Connect-AzAccount -Environment AzureCloud
     }
 }
 
 function Get-FileName ([String]$Report_Name) {    
     
     $file_path = "c:\temp\"
-    $date = Get-Date -UFormat "%Y%m%d"
-
-    Set-Location -Path $file_path  
+    $date = Get-Date -UFormat "%Y%m%d"    
     
     $file_path = "C:\temp\AzureReports\"
     $file_name = $file_path + $Report_Name + ".xlsx"
@@ -46,37 +50,41 @@ function Get-FileName ([String]$Report_Name) {
     return $file_name
 }
 
+# Create Folders
+
+Get-FileName
+
 function Invoke-AzureSubscriptionLoop {
     
     Set-AzureLogin
 
-    # Fetch current working directory 
+# Fetch current working directory 
     $Report_Name = Get-FileName -Report_Name "AzureTagsReport"
 
-    # Fetching subscription list
+# Fetching subscription list
     $subscription_list = Get-AzSubscription 
     $Azure_Tags = @()
     
-    # Fetching the IaaS inventory list for each subscription
+# Fetching the IaaS inventory list for each subscription
     foreach ($subscription_list_iterator in $subscription_list) {
 
         echo $subscription_list_iterator.Name
 
         try {
 
-            #Selecting the Azure Subscription
+#Selecting the Azure Subscription
             Select-AzSubscription -SubscriptionName $subscription_list_iterator.Name
 
             $resource_groups = Get-AzResourceGroup
             $export_array = $null
             $export_array = @()
-            #Iterate through resource groups
+#Iterate through resource groups
             foreach ($resource_group_iterator in $resource_groups) {
                 
-                #Get Resource Group Tags
+#Get Resource Group Tags
                 $rg_tags = (Get-AzResourceGroup -Name $resource_group_iterator.ResourceGroupName)
                 $Tags = $rg_tags.Tags
-                #Checking if tags is null or has value
+#Checking if tags is null or has value
                 if ($Tags -ne $null) {
                     
                     $Tags.GetEnumerator() | % { 
@@ -112,18 +120,18 @@ function Invoke-AzureSubscriptionLoop {
                 }
             }
 
-            #Getting all Azure Resources
+#Getting all Azure Resources
             $resource_list = Get-AzResource
             
-            #Declaring Variables
+#Declaring Variables
             $TagsAsString = ""
 
             foreach ($resource in $resource_list) {
                
-                #Fetching Tags
+#Fetching Tags
                 $Tags = $resource.Tags
     
-                #Checking if tags is null or has value
+#Checking if tags is null or has value
                 if ($Tags -ne $null) {
                     
                     $Tags.GetEnumerator() | % { 
@@ -159,7 +167,7 @@ function Invoke-AzureSubscriptionLoop {
                 }
             }
 
-            #Generating Output
+#Generating Output
             $echo = "Writing to: " + $Report_Name
             echo $echo
             $Azure_Tags += $export_array
