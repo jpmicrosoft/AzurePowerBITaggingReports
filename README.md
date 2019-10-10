@@ -15,6 +15,7 @@ This solution extracts tagging from all of the subscriptions of which the user w
 
 ### Power BI Desktop 
 
+##### [Power BI Desktop](https://aka.ms/powerbinow)
 ##### [Word Cloud](https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380752?tab=Overview)
 ##### [Bubble Chart by Akvelon](https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381340?tab=Overview) (using the free version)
 
