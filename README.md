@@ -12,16 +12,16 @@ Please ensure that you have PowerShell 5.1 and the modules listed below installe
 ### PowerShell
 
 ###### PowerShell version 5.1
-###### Azure [Az Module](https://aka.ms/az270)
-###### [ImportExcel Module](https://aka.ms/importexcel542) 
+###### Install Azure [Az Module](https://aka.ms/az270)
+###### Install [ImportExcel Module](https://aka.ms/importexcel542) 
 
 ### Power BI Desktop 
 Please ensure that you have Power BI Desktop and the visualization listed installed.
 
+##### Install [Power BI Desktop](https://aka.ms/powerbinow)
 #### [How to add visualizations from the marketplace?](https://docs.microsoft.com/en-us/power-bi/power-bi-custom-visuals#download-or-import-power-bi-visuals-from-microsoft-appsource)
-##### [Power BI Desktop](https://aka.ms/powerbinow)
-##### [Word Cloud](https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380752?tab=Overview)
-##### [Bubble Chart by Akvelon](https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381340?tab=Overview) (using the free version)
+##### Add [Word Cloud](https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380752?tab=Overview)
+##### Add [Bubble Chart by Akvelon](https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381340?tab=Overview) (using the free version)
 
 ## Instructions
 Ensure the prerequisites have been completed.
