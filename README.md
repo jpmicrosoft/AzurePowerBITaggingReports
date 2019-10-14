@@ -17,8 +17,17 @@ Please ensure that you have PowerShell 5.1 and the modules listed below installe
 
 ### Power BI Desktop 
 Please ensure that you have Power BI Desktop and the visualization listed installed.
+
+#### [How to add visualizations from the marketplace?](https://docs.microsoft.com/en-us/power-bi/power-bi-custom-visuals#download-or-import-power-bi-visuals-from-microsoft-appsource)
 ##### [Power BI Desktop](https://aka.ms/powerbinow)
 ##### [Word Cloud](https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380752?tab=Overview)
 ##### [Bubble Chart by Akvelon](https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381340?tab=Overview) (using the free version)
+
+## Instructions
+Ensure the prerequisites have been completed.
+1. Open PowerShell as administrator
+2. Run the Tagging-Report-V3.ps1
+3. Navigate to the path were the file was exported and confirm that it exist and that you see data.
+4. Open Azure Tagging Reports.pbix file in PowerBI Desktop. If you kept the path and folders with the default settings, the reports will populated automatically.
 
 A special thanks to [Ernest Oshokoya](https://github.com/eosho) for providing the original script!
