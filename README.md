@@ -30,4 +30,21 @@ Ensure the prerequisites have been completed.
 3. Navigate to the path were the file was exported and confirm that it exist and that you see data.
 4. Open Azure Tagging Reports.pbix file in PowerBI Desktop. If you kept the path and folders with the default settings, the reports will populated automatically.
 
-A special thanks to [Ernest Oshokoya](https://github.com/eosho) for providing the original script!
+## Sample Reports
+### Sample Report 1
+
+![Sample Report 1](https://github.com/jpmicrosoft/AzurePowerBITaggingReports/raw/master/Report1.jpg "Sample Report 1")
+
+### Sample Report 2
+
+![Sample Report 2](https://github.com/jpmicrosoft/AzurePowerBITaggingReports/raw/master/Report2.jpg "Sample Report 2")
+
+### Sample Report 3
+
+![Sample Report 3](https://github.com/jpmicrosoft/AzurePowerBITaggingReports/raw/master/Report3.jpg "Sample Report 3")
+
+### Sample Report 4
+
+![Sample Report 4](https://github.com/jpmicrosoft/AzurePowerBITaggingReports/raw/master/Report4.jpg "Sample Report 4")
+
+A special thanks to [Ernest Oshokoya](https://github.com/eosho) for providing the original PowerShell script!
