@@ -1,7 +1,7 @@
 # Azure Power BI Tagging Reports
 
 ## Overview
-This solution extracts tagging from all of the subscriptions of which the user who runs the scripts has access to. It exports the data to an Excel file. Power BI Desktop is used to provide several visualizations.  There are four reports, each with four additional variations of each report. The variation being the primary visualization.
+This solution extracts tagging from all the subscriptions of which the user who runs the scripts has access to. It exports the data to an Excel file. Power BI Desktop is used to provide several visualizations.  There are four reports, each with four additional variations of each report. The variation being the primary visualization.
 
 *Resources without tags are represented with a NULL value.
 
